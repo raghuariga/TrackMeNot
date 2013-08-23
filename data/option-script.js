@@ -72,6 +72,7 @@ function TMNSetOptionsMenu( tab_inputs) {
 	$("#trackmenot-blacklist").val(kw_black_list);
 	$("#trackmenot-use-blacklist").prop('checked', options.use_black_list);
     $("#trackmenot-use-dhslist").prop('checked', options.use_dhs_list);
+    $("#trackmenot-use-noise").prop('checked', options.use_noise);
 	
     var engines = options.searchEngines.split(',');
     for( var i=0; i< engines.length;i++) 
@@ -170,6 +171,7 @@ function saveOptions() {
     options.feedList = $("#trackmenot-seed").val();
     options.use_black_list =  $("#trackmenot-use-blacklist").is(':checked');
     options.use_dhs_list =    $("#trackmenot-use-dhslist").is(':checked');
+    options.use_noise =    $("#trackmenot-use-noise").is(':checked');
     options.kw_black_list =  $("#trackmenot-blacklist").val();
     return options;
 }
